@@ -1,9 +1,13 @@
 package com.devsenior.vetcare.service;
 
+import com.devsenior.vetcare.dto.VeterinarioRequest;
+import com.devsenior.vetcare.dto.VeterinarioResponse;
 import java.util.List;
 
-import com.devsenior.vetcare.model.Veterinario;
-
 public interface VeterinarioService {
-    List<Veterinario> listarTodos();
+    List<VeterinarioResponse> listarTodos();
+    VeterinarioResponse buscarPorId(Long id);
+    VeterinarioResponse crear(VeterinarioRequest request);
+    VeterinarioResponse actualizar(Long id, VeterinarioRequest request);
+    void eliminar(Long id);
 }
